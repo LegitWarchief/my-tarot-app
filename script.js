@@ -10,7 +10,7 @@ const cardsData = [
     { name: 'Savaş Arabası', image: 'assets/cards/07-TheChariot.jpg', meaning: 'Azim, zafer, irade gücü.' },
     { name: 'Güç', image: 'assets/cards/08-Strength.jpg', meaning: 'Cesaret, içsel güç, sabır.' },
     { name: 'Ermiş', image: 'assets/cards/09-TheHermit.jpg', meaning: 'Yalnızlık, iç gözlem, rehberlik.' },
-    { name: 'Kader Çarkı', image: 'assets/cards/10-WheelofFortune.jpg', meaning: 'Kader, şans, dönüm noktası.' },
+    { name: 'Kader Çarkı', image: 'assets/cards/10-WheelOfFortune.jpg', meaning: 'Kader, şans, dönüm noktası.' },
     { name: 'Adalet', image: 'assets/cards/11-Justice.jpg', meaning: 'Adalet, denge, gerçeklik.' },
     { name: 'Asılan Adam', image: 'assets/cards/12-TheHangedMan.jpg', meaning: 'Teslimiyet, farklı bir bakış açısı.' },
     { name: 'Ölüm', image: 'assets/cards/13-Death.jpg', meaning: 'Sonlanma, dönüşüm, yeniden doğuş.' },
@@ -462,4 +462,5 @@ style.textContent = `
     font-size: 0.9em;
 }
 `;
+
 document.head.appendChild(style);
