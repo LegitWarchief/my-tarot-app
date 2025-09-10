@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="shuffle-sound" src="assets/sounds/shuffling.mp3" preload="auto"></audio>
+
+    <div id="intro-screen" class="screen active">
+        <div class="intro-content">
+            <h1>Tarot Kartı Seçimi</h1>
+            <p>Bir kart seçin ve kaderinizi keşfedin.</p>
+            <button id="start-button">Başla</button>
+        </div>
+    </div>
+
+    <div id="question-screen" class="screen">
+        <div class="question-content">
+            <h2>Nedir Bilmek İstediğin?</h2>
+            <input type="text" id="user-name" placeholder="İsminizi girin" />
+            <input type="text" id="user-question" placeholder="Sorunuzu buraya yazın..." />
+            <button id="submit-question">Devam Et</button>
+        </div>
+    </div>
+
+    <div id="spread-screen" class="screen">
+      <div class="spread-content">
+        <h2>Bir açılım seçin</h2>
+        <button data-spread="single">TEK KART AÇILIMI</button>
+        <button data-spread="three">ÜÇ KART AÇILIMI</button>
+        <button data-spread="celtic">KELT HAÇI AÇILIMI</button>
+        <button data-spread="love">AŞK AÇILIMI</button>
+      </div>
+    </div>
+
+    <div id="card-area" class="screen">
+        <div id="card-deck"></div>
+    </div>
+
+    <div id="ai-panel">
+        <div id="loading-dots">⋯</div>
+        <div id="ai-response"></div>
+        <div id="speech-buttons">
+            <button id="speak-button">🔊 Sesli Oku</button>
+            <button id="stop-speech">⏹️ Durdur</button>
+        </div>
+    </div>
+
+    <div id="result-area" class="screen">
+        <button id="retry-button">Yeniden Dene</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
