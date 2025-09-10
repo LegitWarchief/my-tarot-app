@@ -397,7 +397,7 @@ function speakText(text) {
     }
     const utter = new SpeechSynthesisUtterance(text);
     utter.lang = "tr-TR";
-    utter.rate = 1;
+    utter.rate = 1.5;
     utter.pitch = 1;
     window.speechSynthesis.speak(utter);
 }
@@ -475,4 +475,5 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
 
