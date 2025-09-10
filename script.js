@@ -215,6 +215,11 @@ function distributeDeck() {
     });
 }
 
+function playSound(file) {
+    const audio = new Audio(`assets/sounds/${file}`);
+    audio.volume = 0.7; 
+    audio.play();
+}
 
 // --- Kart seçimi ---
 function handleCardClick(event) {
@@ -234,7 +239,8 @@ function handleCardClick(event) {
         card.appendChild(label);
 
         chosenCards.push({ cardEl: card, name: card.dataset.name, meaning: card.dataset.meaning });
-
+        // 🔊 Kart seçme sesi
+        playSound("select.mp3");
         if (chosenCards.length === spreadCardLimit) {
             distributeSelectedSpread();
             spreadPlaced = true;
@@ -252,8 +258,13 @@ function handleCardClick(event) {
             const cData = chosenCards.find(c => c.cardEl === card);
             if (cData) showCardMeaning(cData);
 
+            // 🔊 Kart çevirme sesi
+            playSound("flip.mp3");
+
             // AI yorumunu yalnızca tüm kartlar açıldıysa çağır
             if (chosenCards.every(c => c.cardEl.classList.contains('revealed'))) {
+                // 🔊 Tüm kartlar açıldığında
+                playSound("reveal.mp3");
                 fetchAIComment(userQuestion, selectedSpread, chosenCards, userName);
             }
         }
@@ -464,3 +475,4 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
